@@ -1,0 +1,20 @@
+{% extends "blog/base.html" %}
+{% block content %}
+	<div class="content-section">
+		<form method = "POST">
+			{% csrf_token %} <!--cross-site forgery token -->
+			<fieldset class="form-group">
+				<legend class="border-bottom mb-4">Register today!</legend>
+				{{ form }}
+			</fieldset>
+			<div class="form-group">
+				<button class="btn btn-outline-info" type="submit">Sign up</button>
+			</div>
+		</form>
+		<div class="border-top pt-3">
+			<small class="text-muted">
+				Already have an account? <a class="m1-2" href="#"> </a>
+			</small>
+		</div>
+	</div></div>
+{% endblock content %}
